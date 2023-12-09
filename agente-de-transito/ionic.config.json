@@ -1,0 +1,7 @@
+{
+  "name": "agente-de-transito",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
