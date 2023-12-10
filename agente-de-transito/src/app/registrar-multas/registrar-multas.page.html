@@ -1,0 +1,76 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>    
+    <ion-title>Registrar Multas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" >
+
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Registrar Multas</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-card>
+    <form (ngSubmit)="registrarMultas()">
+            <ion-item>
+        <ion-label position="stacked">Cedula</ion-label>
+        <ion-input [(ngModel)]="multas.cedula" name="cedula" type="number"required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Placa del vehiculo</ion-label>
+        <ion-input [(ngModel)]="multas.placa" name="placa" ></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Motivo de la multa</ion-label>
+        <ion-input [(ngModel)]="multas.motivo" name="motivo" ></ion-input>
+      </ion-item>
+
+     <ion-item>
+        <ion-label position="stacked">Foto</ion-label>
+        <ion-input type="file" (change)="cargarFoto($event)" accept="image/*" class="file"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Comentario</ion-label>
+        <ion-textarea [(ngModel)]="multas.comentario" name="comentario" rows="5" required></ion-textarea>
+      </ion-item>
+    
+      <ion-item>
+        <ion-label position="stacked">Audio</ion-label>
+        <ion-input type="file" (change)="cargarAudio($event)" accept="audio/*"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Fecha</ion-label>
+        <ion-input type="date" [(ngModel)]="multas.fecha" name="fecha" required></ion-input>
+      </ion-item>
+      
+      <ion-item>
+        <ion-label position="stacked">Hora</ion-label>
+        <ion-input [(ngModel)]="multas.hora" name="hora" type="time"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Latitud</ion-label>
+        <ion-input type="number" [(ngModel)]="multas.latitud" name="lalitud"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Longitud</ion-label>
+        <ion-input type="number" [(ngModel)]="multas.longitud" name="longitud"></ion-input>
+      </ion-item>
+
+      <ion-button expand="full" type="submit" class="btn-submit">Registrar multa</ion-button>
+
+      
+    </form>
+  </ion-card>
+  
+</ion-content>
