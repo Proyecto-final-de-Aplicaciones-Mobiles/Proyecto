@@ -10,9 +10,14 @@ const routes: Routes = [
   {
     path: 'folder/:id',
     loadChildren: () => import('./folder/folder.module').then( m => m.FolderPageModule)
-  },  {
+  },
+  {
     path: 'registrar-multas',
     loadChildren: () => import('./registrar-multas/registrar-multas.module').then( m => m.RegistrarMultasPageModule)
+  },
+  {
+    path: 'Buscar',
+    loadChildren: () => import('./Buscar-multas/consultar-multas.module').then( m => m.ConsultarMultasPageModule)
   }
 
 ];
