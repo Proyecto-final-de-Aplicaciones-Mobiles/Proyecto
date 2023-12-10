@@ -9,7 +9,7 @@ export class AppComponent {
     { title: 'Inicio', url: '/folder/inbox', icon: 'home' },
     { title: '1', url: '/folder/outbox', icon: 'world' },
     { title: 'Registro de multas', url: '/registrar-multas', icon: 'heart' },
-    { title: 'Archived', url: '/folder/archived', icon: 'archive' },
+    { title: 'Buscar', url: '/folder/Buscar', icon: 'archive' },
     { title: 'Trash', url: '/folder/trash', icon: 'trash' },
     { title: 'Spam', url: '/folder/spam', icon: 'warning' },
   ];
