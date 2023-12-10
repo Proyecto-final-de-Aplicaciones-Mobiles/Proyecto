@@ -18,7 +18,11 @@ const routes: Routes = [
   {
     path: 'Buscar',
     loadChildren: () => import('./Buscar-multas/consultar-multas.module').then( m => m.ConsultarMultasPageModule)
+  },  {
+    path: 'tarifa-multas',
+    loadChildren: () => import('./tarifa-multas/tarifa-multas.module').then( m => m.TarifaMultasPageModule)
   }
+
 
 ];
 
