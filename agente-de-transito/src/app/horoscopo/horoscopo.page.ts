@@ -7,13 +7,14 @@ import { HttpHeaders, HttpClient } from '@angular/common/http';
   styleUrls: ['./horoscopo.page.scss'],
 })
 export class HoroscopoPage {
-  apiKey = '9593cf715amshec50f32e6497053p1ff598jsn4bfe0b5b13e0';
+
+  apiKey = '368343eb27msh87b3bd94ba6bbf2p17aa24jsn9654221f54bf';
   url = 'https://daily-horoscope-api.p.rapidapi.com/';
-  translationApiKey = '9593cf715amshec50f32e6497053p1ff598jsn4bfe0b5b13e0'; // Reemplaza con tu propia API key de Google Translate
+  translationApiKey = '368343eb27msh87b3bd94ba6bbf2p17aa24jsn9654221f54bf';
 
   horoscopeContent: any;
   translatedHoroscope: string = '';
-  selectedSigno: string = ''; // Añade esta línea
+  selectedSigno: string = '';
 
   constructor(private http: HttpClient) { }
 
