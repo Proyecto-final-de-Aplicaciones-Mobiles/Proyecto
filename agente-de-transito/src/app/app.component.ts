@@ -12,7 +12,10 @@ export class AppComponent {
     { title: 'Registro de multas', url: '/registrar-multas', icon: 'duplicate' },
     { title: 'Buscar', url: '/Buscar', icon: 'archive' },
     { title: 'Clima', url: '/clima', icon: 'sunny' },
+  
+    { title: 'Noticias', url: '/noticias', icon: 'radio' },
     { title: 'Horoscopo', url: '/horoscopo', icon: 'star' },
+  
   ];
 
   constructor() {}

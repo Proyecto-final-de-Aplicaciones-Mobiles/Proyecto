@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+     Noticias Importantes 
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list *ngIf="headlines">
+    <ion-item *ngFor="let headline of headlines">
+      <ion-card-subtitle>- </ion-card-subtitle>
+      {{ headline.title.rendered }}
+    </ion-item>
+  </ion-list>
+</ion-content>

@@ -18,7 +18,8 @@ const routes: Routes = [
   {
     path: 'Buscar',
     loadChildren: () => import('./Buscar-multas/consultar-multas.module').then( m => m.ConsultarMultasPageModule)
-  },  {
+  },
+  {
     path: 'tarifa-multas',
     loadChildren: () => import('./tarifa-multas/tarifa-multas.module').then( m => m.TarifaMultasPageModule)
   },
@@ -37,7 +38,14 @@ const routes: Routes = [
   {
     path: 'buscar-placa',
     loadChildren: () => import('./buscar-placa/buscar-placa.module').then( m => m.BuscarPlacaPageModule)
+  },
+  
+  {
+    path: 'noticias',
+    loadChildren: () => import('./noticias/noticias.module').then( m => m.NoticiasPageModule)
   }
+
+  
 
 
 ];
