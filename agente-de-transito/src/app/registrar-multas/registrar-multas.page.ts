@@ -8,6 +8,8 @@ import { AngularFireStorage } from "@angular/fire/compat/storage"
 })
 export class RegistrarMultasPage implements OnInit {
 
+  tarifas: any[] = [];
+
   multas = {
     cedula: '',
     placa: '',
@@ -63,9 +65,9 @@ export class RegistrarMultasPage implements OnInit {
       const fotoPath = `fotos/${new Date().getTime()}_${this.imageUrl.name}`;
 
       const snapshot = await this.storage.upload(fotoPath, this.imageUrl);
-
-      //Danna Paola 2021-2270
+      
       return this.storage.ref(fotoPath).getDownloadURL().toPromise();
+      
     }else{
       throw new Error ('No se envio una imagen') 
     }
@@ -84,10 +86,14 @@ export class RegistrarMultasPage implements OnInit {
     this.storage.upload(audioPath, audioFile).then(snapshot => {
       snapshot.ref.getDownloadURL().then(url => {
         this.multas.audioURL = url;
+        console.log('URL del audio:', url)
       });
     });
   }
 
   ngOnInit() {
+    this.firestore.collection('tarifa').valueChanges().subscribe((data: any[]) => {
+      this.tarifas = data;
+    });
   }
 }

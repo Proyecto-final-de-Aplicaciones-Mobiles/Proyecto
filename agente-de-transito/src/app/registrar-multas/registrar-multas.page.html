@@ -29,7 +29,11 @@
 
       <ion-item>
         <ion-label position="stacked">Motivo de la multa</ion-label>
-        <ion-input [(ngModel)]="multas.motivo" name="motivo" ></ion-input>
+        <ion-select [(ngModel)]="multas.motivo" name="motivo">
+          <ion-select-option *ngFor="let tarifa of tarifas" [value]="tarifa.nombre">
+            {{ tarifa.detalle }}
+          </ion-select-option>
+        </ion-select>
       </ion-item>
 
      <ion-item>
@@ -67,7 +71,7 @@
         <ion-input type="number" [(ngModel)]="multas.longitud" name="longitud"></ion-input>
       </ion-item>
 
-      <ion-button expand="full" type="submit" class="btn-submit">Registrar multa</ion-button>
+      <ion-button expand="block" type="submit" class="btn-submit">Registrar multa</ion-button>
 
       
     </form>
