@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-
 const routes: Routes = [
   {
     path: '',
@@ -38,6 +37,10 @@ const routes: Routes = [
   {
     path: 'buscar-placa',
     loadChildren: () => import('./buscar-placa/buscar-placa.module').then( m => m.BuscarPlacaPageModule)
+  },
+  {
+    path: 'mapa',
+    loadChildren: () => import('./mapa/mapa.module').then(m=>m.MapaComponentModule)
   }
 
 

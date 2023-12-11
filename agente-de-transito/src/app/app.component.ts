@@ -13,6 +13,8 @@ export class AppComponent {
     { title: 'Registro de multas', url: '/registrar-multas', icon: 'duplicate' },
     { title: 'Clima', url: '/clima', icon: 'sunny' },
     { title: 'Horoscopo', url: '/horoscopo', icon: 'star' },
+    { title: 'Mapa', url: '/mapa', icon: 'map' },
+
   ];
 
   constructor() {}
