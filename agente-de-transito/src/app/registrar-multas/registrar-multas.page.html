@@ -71,6 +71,33 @@
         <ion-input type="number" [(ngModel)]="multas.longitud" name="longitud"></ion-input>
       </ion-item>
 
+      <h2>Datos del conductor</h2>
+
+      <ion-item>
+        <ion-label position="stacked">Nombre</ion-label>
+        <ion-input [(ngModel)]="multas.nombre" name="nombre"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Apellido</ion-label>
+        <ion-input [(ngModel)]="multas.apellido" name="apellido"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Fecha de nacimiento</ion-label>
+        <ion-input type="date" [(ngModel)]="multas.fechaDenacimiento" name="fechaDenacimiento"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Direccion</ion-label>
+        <ion-input  [(ngModel)]="multas.direccion" name="direccion"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Telefono</ion-label>
+        <ion-input type="number" [(ngModel)]="multas.telefono" name="telefono"></ion-input>
+      </ion-item>
+
       <ion-button expand="block" type="submit" class="btn-submit">Registrar multa</ion-button>
 
       

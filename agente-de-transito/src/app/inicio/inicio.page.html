@@ -14,13 +14,14 @@
       <ion-title size="large" class="ion-text-center">BIENVENIDO AMET</ion-title>
     </ion-toolbar>
     <h2 style="font-size: 28px; padding: 6px; color: white; text-align:center ">En esta app podrá consultar los tipos de multas, su monto, buscar licencias, consultar el clima y leer el horospoco del dia, también puede registrar multas y visualizarlas </h2>
+    <ion-img src="/assets/img/logo digeset.jpg"></ion-img>
   </ion-card>
 
   <ion-label style="margin-left: 10px; font-size: 36px">Listado de multas</ion-label>
   <ion-card > 
     <ion-list>
       <ion-item *ngFor="let multa of multas">
-        <ion-title>{{ multa.cedula }}, {{ multa.motivo }}</ion-title>
+        <ion-title>{{multa.nombre}} - {{ multa.cedula }}, {{ multa.motivo }}</ion-title>
         <ion-button (click)="mostrarDetalle(multa)" class="btn-detalle">Detalles</ion-button>
       </ion-item>
     </ion-list>
@@ -28,7 +29,9 @@
     <div *ngIf="showDetail" class="detalle-vivencia">
       <ion-card class="custom-card">
         <ion-card-content>
-          <h3>Cedula</h3>
+          <h3>Nombre completo:</h3>
+          <p>{{ selectedMulta.nombre }} {{ selectedMulta.apellido }}</p>
+          <h3>Cedula:</h3>
           <p>{{ selectedMulta.cedula }}</p>
           <h3>Comentario:</h3>
           <p>{{ selectedMulta.comentario }}</p>

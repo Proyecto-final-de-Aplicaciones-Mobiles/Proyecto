@@ -20,7 +20,12 @@ export class RegistrarMultasPage implements OnInit {
     hora: '',
     latitud: '',
     longitud: '',
-    audioURL: ''
+    audioURL: '',
+    nombre: '',
+    apellido: '',
+    fechaDenacimiento: '',
+    direccion: '',
+    telefono: '',
   }
 
   imageUrl: File | null = null;
@@ -44,7 +49,12 @@ export class RegistrarMultasPage implements OnInit {
             hora: '',
             latitud: '',
             longitud: '',
-            audioURL: ''
+            audioURL: '',
+            nombre: '',
+            apellido: '',
+            fechaDenacimiento: '',
+            direccion: '',
+            telefono: '',
           }
 
           this.imageUrl = null;
