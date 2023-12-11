@@ -14,6 +14,7 @@ export class AppComponent {
     { title: 'Clima', url: '/clima', icon: 'sunny' },
     { title: 'Horoscopo', url: '/horoscopo', icon: 'star' },
     { title: 'Mapa', url: '/mapa', icon: 'map' },
+    { title: 'Noticias', url: '/noticias', icon: 'radio' },
 
   ];
 
