@@ -33,6 +33,10 @@ const routes: Routes = [
   {
     path: 'horoscopo',
     loadChildren: () => import('./horoscopo/horoscopo.module').then( m => m.HoroscopoPageModule)
+  },
+  {
+    path: 'buscar-placa',
+    loadChildren: () => import('./buscar-placa/buscar-placa.module').then( m => m.BuscarPlacaPageModule)
   }
 
 

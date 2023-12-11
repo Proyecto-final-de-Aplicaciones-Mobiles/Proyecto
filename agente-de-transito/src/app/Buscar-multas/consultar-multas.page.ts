@@ -18,11 +18,11 @@ export class ConsultarMultaPage implements OnInit  {
 
   buscarConductor() {
     console.log('Número de cédula ingresado:', this.cedula);
-  
+
     if (typeof this.cedula === 'number' && !isNaN(this.cedula)) {
       const multasCollection = this.firestore.collection("multas");
       const query = multasCollection.ref.where('cedula', '==', this.cedula);
-  
+
       query.get().then((querySnapshot) => {
         if (!querySnapshot.empty) {
           // Existe al menos una multa con la cédula proporcionada
