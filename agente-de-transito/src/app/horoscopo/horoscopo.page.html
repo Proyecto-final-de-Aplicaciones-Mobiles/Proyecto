@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>  
+    <ion-title>
+      Horóscopo
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-item>
+    <ion-label>Selecciona un signo</ion-label>
+    <ion-select [(ngModel)]="selectedSigno" placeholder="Selecciona un signo" (ionChange)="getHoroscope(selectedSigno)">
+      <ion-select-option value="aries">Aries</ion-select-option>
+      <ion-select-option value="taurus">Tauro</ion-select-option>
+      <ion-select-option value="gemini">Geminis</ion-select-option>
+      <ion-select-option value="cancer">Cancer</ion-select-option>
+      <ion-select-option value="leo">Leo</ion-select-option>
+      <ion-select-option value="virgo">Virgo</ion-select-option>
+      <ion-select-option value="libra">Libra</ion-select-option>
+      <ion-select-option value="scorpio">Escorpio</ion-select-option>
+      <ion-select-option value="sagittarius">Sagitario</ion-select-option>
+      <ion-select-option value="capricorn">Capricornio</ion-select-option>
+      <ion-select-option value="aquarius">Acuario</ion-select-option>
+      <ion-select-option value="pisces">Piscis</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-card *ngIf="horoscopeContent">
+    <ion-card-header>
+      <ion-card-title>{{ horoscopeContent.sign }}</ion-card-title>
+    </ion-card-header>
+    
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-label>Horóscopo original:</ion-label>
+          <ion-text>{{ horoscopeContent.prediction }}</ion-text>
+        </ion-item>
+        <ion-item>
+          <ion-label>Horóscopo traducido:</ion-label>
+          <ion-text>{{ translatedHoroscope }}</ion-text>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
