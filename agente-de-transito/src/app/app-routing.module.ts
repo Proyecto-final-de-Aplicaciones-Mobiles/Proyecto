@@ -21,6 +21,10 @@ const routes: Routes = [
   },  {
     path: 'tarifa-multas',
     loadChildren: () => import('./tarifa-multas/tarifa-multas.module').then( m => m.TarifaMultasPageModule)
+  },
+  {
+    path: 'clima',
+    loadChildren: () => import('./clima/clima.module').then( m => m.ClimaPageModule)
   }
 
 

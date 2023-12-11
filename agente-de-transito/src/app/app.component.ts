@@ -10,7 +10,7 @@ export class AppComponent {
     { title: 'Tarifa de multas', url: '/tarifa-multas', icon: 'cash' },
     { title: 'Registro de multas', url: '/registrar-multas', icon: 'heart' },
     { title: 'Buscar', url: '/Buscar', icon: 'archive' },
-    { title: 'Trash', url: '/folder/trash', icon: 'trash' },
+    { title: 'Clima', url: '/clima', icon: 'sunny' },
     { title: 'Spam', url: '/folder/spam', icon: 'warning' },
   ];
 
