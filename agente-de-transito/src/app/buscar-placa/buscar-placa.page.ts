@@ -10,10 +10,12 @@ import { BuscarService } from './buscar.service';
 export class BuscarPlacaPage implements OnInit {
   placa: string;
   conductorInfo: any;
+  mensaje: any;
 
   constructor(private buscarService: BuscarService) {
     this.placa = '';
     this.conductorInfo = null;
+    this.mensaje = null;
   }
 
   buscarPlaca() {
@@ -24,7 +26,7 @@ export class BuscarPlacaPage implements OnInit {
             this.conductorInfo = resultados[0];
             console.log('Resultado encontrado por placa:', this.conductorInfo);
           } else {
-            console.log('No se encontraron resultados por placa');
+            this.mensaje = 'No se encontraron resultados por placa';
             this.conductorInfo = null;
           }
         },
@@ -33,7 +35,7 @@ export class BuscarPlacaPage implements OnInit {
         }
       );
     } else {
-      console.log('Ingrese una placa válida');
+      this.mensaje = 'Ingrese una placa válida';
     }
   }
 

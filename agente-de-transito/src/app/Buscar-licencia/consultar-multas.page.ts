@@ -1,19 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 
 @Component({
-  selector: 'app-Buscar-multas',
+  selector: 'app-Buscar-licencia',
   templateUrl: './consultar-multa.page.html',
   styleUrls: ['./consultar-multas.page.scss'],
 })
 
-export class ConsultarMultaPage implements OnInit  {
+export class ConsultarMultaPage implements OnInit {
   cedula: number;
   conductorInfo: any;
+  mensaje: any;
 
-  constructor(private firestore: AngularFirestore) {
+  constructor(private firestore: AngularFirestore, private cdr: ChangeDetectorRef) {
     this.cedula = 0;
     this.conductorInfo = null;
+    this.mensaje = null;
   }
 
   buscarConductor() {
@@ -29,16 +31,20 @@ export class ConsultarMultaPage implements OnInit  {
           const primerResultado = querySnapshot.docs[0].data();
           this.conductorInfo = primerResultado;
           console.log(this.conductorInfo);
+
+          // Forzar la detección de cambios después de actualizar la variable
+          this.cdr.detectChanges();
         } else {
           // No se encontraron multas con la cédula especificada
-          console.log('Conductor no encontrado');
+          this.mensaje = 'Conductor no encontrado';
           this.conductorInfo = null;
+
         }
       }).catch((error) => {
-        console.error('Error en la consulta:', error);
+        this.mensaje = 'Error en la consulta:', error;
       });
     } else {
-      console.log('Ingrese un número de cédula válido');
+      this.mensaje = 'Ingrese un número de licencia válido';
     }
   }
 

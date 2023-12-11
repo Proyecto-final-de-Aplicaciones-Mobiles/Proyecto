@@ -23,5 +23,27 @@
       <ion-button type="submit" expand="block">Buscar</ion-button>
     </form>
   </ion-card>
+  
+  <!--Mensaje de error o que no se encontro el conductor-->
+  <ion-card *ngIf="mensaje">
+    <h2 style="color: white;text-align: center; padding: 20px;">{{ mensaje }}</h2>
+  </ion-card>
 
+  <ion-card *ngIf="conductorInfo">
+    <ion-list>
+      <ion-item>
+        <ion-label>
+          <h1>Nombre: {{ conductorInfo.nombre }} {{conductorInfo.apellido }}</h1>
+          <h2>Placa: {{ conductorInfo.placa }}</h2>
+          <p>Fecha de Nacimiento: {{ conductorInfo.fechaDenacimiento }}</p>
+          <p>Telefono: {{ conductorInfo.telefono }}</p>
+          <p>Direccion {{ conductorInfo.direccion }} </p>
+          <p>Hora: {{ conductorInfo.hora }}</p>
+          <p>Comentario: {{ conductorInfo.comentario }}</p>
+          <!-- Puedes añadir más propiedades según sea necesario -->
+          <img src="{{ conductorInfo.fotoURL }}" alt="">
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-card>
 </ion-content>

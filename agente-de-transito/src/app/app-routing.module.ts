@@ -16,9 +16,10 @@ const routes: Routes = [
     loadChildren: () => import('./registrar-multas/registrar-multas.module').then( m => m.RegistrarMultasPageModule)
   },
   {
-    path: 'Buscar',
-    loadChildren: () => import('./Buscar-multas/consultar-multas.module').then( m => m.ConsultarMultasPageModule)
-  },  {
+    path: 'buscar-licencia',
+    loadChildren: () => import('./Buscar-licencia/consultar-multas.module').then( m => m.ConsultarMultasPageModule)
+  },
+  {
     path: 'tarifa-multas',
     loadChildren: () => import('./tarifa-multas/tarifa-multas.module').then( m => m.TarifaMultasPageModule)
   },

@@ -9,8 +9,8 @@ export class AppComponent {
     { title: 'Inicio', url: '/inicio', icon: 'home' },
     { title: 'Tarifa de multas', url: '/tarifa-multas', icon: 'cash' },
     { title: 'Buscar Placa', url: '/buscar-placa', icon: 'search' },
+    { title: 'Buscar Licencia', url: '/buscar-licencia', icon: 'archive' },
     { title: 'Registro de multas', url: '/registrar-multas', icon: 'duplicate' },
-    { title: 'Buscar', url: '/Buscar', icon: 'archive' },
     { title: 'Clima', url: '/clima', icon: 'sunny' },
     { title: 'Horoscopo', url: '/horoscopo', icon: 'star' },
   ];
