@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "786622370892",
+    "project_id": "agente-de-transito-76b2f",
+    "storage_bucket": "agente-de-transito-76b2f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:786622370892:android:148cda788158cfe9cf50e9",
+        "android_client_info": {
+          "package_name": "io.ionic.starter"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA1U0MIGWqi1bCHjiEg5uv0AsOzWnQvk74"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
